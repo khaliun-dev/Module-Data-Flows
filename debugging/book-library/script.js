@@ -27,7 +27,7 @@ const pages = document.getElementById("pages");
 const check = document.getElementById("check");
 
 
-function submit() {
+function addBook() {
   if (
     title.value == "" ||
     author.value == "" ||
@@ -45,6 +45,12 @@ function submit() {
   );
 
   myLibrary.push(book);
+
+  title.value = "";
+  author.value = "";
+  pages.value = "";
+  check.checked = false;
+
   render();
 }
 
