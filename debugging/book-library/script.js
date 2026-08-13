@@ -118,7 +118,9 @@ function render() {
       myLibrary.splice(i, 1);
       render();
 
-      alert(`You've deleted title: ${deletedTitle}`);
+      setTimeout(function () {
+        alert(`You've deleted title: ${deletedTitle}`);
+      }, 0);
     });
   }
 }
